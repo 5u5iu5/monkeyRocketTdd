@@ -6,7 +6,7 @@ Author: Alvaro Del Pozo
 
 ## Space Monkey Rocket 
 
-![alt text](https://github.com/5u5iu5/monkeyRocketTdd/src/images/monkeyrocket.png "Logo")
+![alt text](https://github.com/5u5iu5/monkeyRocketTdd/blob/master/src/images/monkeyrocket.png "Logo")
 
 ### Requisitos
 
