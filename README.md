@@ -1,6 +1,6 @@
 # Scala Kata
 
-Leevel: Easy
+Level: Easy
 
 Author: Alvaro Del Pozo
 
