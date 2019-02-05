@@ -23,7 +23,7 @@ Y en la cuenta atrás se desconfigure (llamada obligatoria al método **monkeyTo
 Siguiente tanda de requisitos por parte de la ESA:
 
 - Ahora se han puesto finos, y no se quiere un boolean como resultado, si no que se devuelva un objecto String con el mensaje "COHETE LANZADO" y en caso de error una excepción de tipo __MonkeyTouchingException__.
-- Si no se pasa nada de configuración en el lanzamiento se entiende que es la configuración por defecto. Y ahora se controla que la configuración por defecto no sea __NoSetup__. Si fuera así, se devolvería un error en la construcción IllegalArgumentException
+- Si no se pasa nada de configuración del servicio del cohete se entiende que es la configuración por defecto. Y ahora se controla que la configuración por defecto no sea __NoSetup__. Si fuera así, se devolvería un error de tipo IllegalArgumentException en la construcción 
 - La cuenta atrás podrá ser de un número que se quiera, no necesariamente de 10.
 - Se tendrá en cuenta que si por algún motivo los monos tocan el panel de control y tenemos un panel loco (__CrazySetup__) se abortará dicha cuenta atrás devolviendo una excepción __MonkeyTouchingException__.
 

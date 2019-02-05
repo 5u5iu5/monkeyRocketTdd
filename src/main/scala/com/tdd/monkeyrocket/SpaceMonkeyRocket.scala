@@ -1,10 +1,16 @@
 package com.tdd.monkeyrocket
 
-import com.tdd.monkeyrocket.Setup.{ControlPanelSetup, NoSetup}
+import com.tdd.monkeyrocket.Setup.{ControlPanelSetup, DefaultSetup, NoSetup}
 
-case class SpaceMonkeyRocket(setup: ControlPanelSetup) {
+object SpaceMonkeyRocket {
+  def apply(setup: ControlPanelSetup, countDown: Seq[Int]): SpaceMonkeyRocket = setup match {
+    case NoSetup => throw  new IllegalArgumentException("Not Setup")
+    case null => new SpaceMonkeyRocket(DefaultSetup, countDown)
+    case _ => new SpaceMonkeyRocket(setup, countDown)
+  }
+}
 
-  private val countDown: Seq[Int] = 1 to 10
+class SpaceMonkeyRocket(val setup: ControlPanelSetup, val countDown: Seq[Int] = 1 to 10) {
 
   import com.tdd.monkeyrocket.MonkeyTouchingLikeCrazy.monkeyTouching
 
@@ -13,7 +19,7 @@ case class SpaceMonkeyRocket(setup: ControlPanelSetup) {
   private def areMonkeysTouching: Int => Boolean = _ => {
     monkeyTouching match {
       case s: ControlPanelSetup if s == setup => true
-      case _ => false
+      case _ => throw new MonkeyTouchingException
     }
   }
 
@@ -22,13 +28,14 @@ case class SpaceMonkeyRocket(setup: ControlPanelSetup) {
     case _ => true
   }
 
-  def launcherRocket: Boolean = {
+  def launcherRocket: String = {
     if (checkSetup(setup)) {
-      countDown.reverse
+      if (countDown.reverse
         .map(areMonkeysTouching)
         .map(adjustSetupByMonkeyFault)
-        .forall(p => p)
-    } else false
+        .forall(p => p))
+        "COHETE LANZADO" else ""
+    } else ""
   }
 
 
