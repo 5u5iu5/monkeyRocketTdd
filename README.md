@@ -35,7 +35,7 @@ Para empezar, bajate el repo, create una rama con tu nombre y pasa los test "sbt
 
 Cuando acabes el ejercicio, comitea los cambios y sientete libre de hacer una pull request.
 
-En el test **SpaceMonkeyRocketSpec**, tenemos una aproximación que nos valdrá para empezar a codificar. El nombre del servicio ya te lo da el propio test. 
+En el test **SpaceMonkeyRocketSpec**, tenemos una aproximación que nos valdrá para empezar a codificar. El nombre del servicio ya te lo da el propio test __SpaceMonkeyRocket__. Será una clase.
 De cara a codificar en un mismo camino todos, el nombre del método, vamos a denominarlo **launcherRocket**. A partir de aquí, libertad absoluta. 
 Y sentir libertar de crear nuevos tests si lo necesitáis.
 
