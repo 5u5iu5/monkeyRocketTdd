@@ -14,7 +14,7 @@ La ESA nos está pidiendo un programa que lance un cohete espacial para comproba
 Para ello nos establece estos requisitos en base a la primera tanda de ideas "y si"
 
 - En el cohete irán 2 monos. Los ingenieros no se fían de los humanos. 
-- El cohete será lanzado con una configuración para el cohete, da igual que tipo de Setup, exceptuando que no tuviera Setup. de ser así el cohete no seŕa lanzado devolviendo false.
+- El cohete será lanzado con una configuración, da igual que tipo de Setup, excepto que no tenga Setup (**NoSetup**). De ser así el cohete no seŕa lanzado devolviendo false.
 - Antes de lanzar, lógicamente viene la famosa cuenta atrás, con lo que el método de lanzamiento realizará una cuenta atrás a partir de 10.
 - Teniendo en cuenta que los monos el día antes se han puesto de M en otro experimento, es posible que hayan desconfigurado la configuración inicial del cohete.
 Y en la cuenta atrás se desconfigure (llamada obligatoria al método **monkeyTouching** de la clase MonkeyTouchingLikeCrazy) teniendo que volver a realizar los ajustes para su correcto funcionamiento.
@@ -30,7 +30,7 @@ Siguiente tanda de requisitos por parte de la ESA:
 
 ## Como empezar
 
-Para empezar, bajate el repo, create una rama con tu nombre y pasa los test "sbt test". Fallarán!!
+Para empezar, bájate el repo, create una rama con tu nombre y pasa los test "sbt test". Fallarán!!
 
 Cuando acabes el ejercicio, comitea los cambios y sientete libre de hacer una pull request.
 
