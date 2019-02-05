@@ -24,7 +24,7 @@ Siguiente tanda de requisitos por parte de la ESA:
 
 - Visto los ensayos, se quiere ahora, que no se devuelva un boolean si no que se devuelva en caso de ser lanzando correctamente el setup pasado como parámetro del cohete
 y en caso de error una excepción de tipo __MonkeyTouchingException__.
-- Si no se pasa nada de configuración en el lanzamiento se entiende que es la configuración por defecto.
+- Si no se pasa nada de configuración en el lanzamiento se entiende que es la configuración por defecto. Y ahora se controla que la configuración por defecto no sea __CrazySetup__. Si fuera así, se devolvería un error en la construcción IllegalArgumentException
 - La cuenta atrás podrá ser de un número que se quiera, no necesariamente de 10.
 - Se tendrá en cuenta que si por algún motivo los monos tocan el panel de control y tenemos un panel loco (__CrazySetup__) se abortará dicha cuenta atrás devolviendo una excepción.
 
