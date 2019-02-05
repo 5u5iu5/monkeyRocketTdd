@@ -14,19 +14,18 @@ La ESA nos está pidiendo un programa que lance un cohete espacial para comproba
 Para ello nos establece estos requisitos en base a la primera tanda de ideas "y si"
 
 - En el cohete irán 2 monos. Los ingenieros no se fían de los humanos. 
-- El cohete será lanzado con una mínima configuración para el cohete, da igual que tipo de Setup.
+- El cohete será lanzado con una configuración para el cohete, da igual que tipo de Setup, exceptuando que no tuviera Setup. de ser así el cohete no seŕa lanzado devolviendo false.
 - Antes de lanzar, lógicamente viene la famosa cuenta atrás, con lo que el método de lanzamiento realizará una cuenta atrás a partir de 10.
 - Teniendo en cuenta que los monos el día antes se han puesto de M en otro experimento, es posible que hayan desconfigurado la configuración inicial del cohete.
-Y en la cuenta atrás se desconfigure (llamada obligatoria al método **monkeyTouching** de la clase MonkeyTouchingLikeCrazy) teniendo que volver a realizar los ajustes para volver a la que se pasó como parámetro.
+Y en la cuenta atrás se desconfigure (llamada obligatoria al método **monkeyTouching** de la clase MonkeyTouchingLikeCrazy) teniendo que volver a realizar los ajustes para su correcto funcionamiento.
 - El lanzamiento devolverá un booleano si fue bién true y si fue mal false.
 
 Siguiente tanda de requisitos por parte de la ESA:
 
-- Visto los ensayos, se quiere ahora, que no se devuelva un boolean si no que se devuelva en caso de ser lanzando correctamente el setup pasado como parámetro del cohete
-y en caso de error una excepción de tipo __MonkeyTouchingException__.
-- Si no se pasa nada de configuración en el lanzamiento se entiende que es la configuración por defecto. Y ahora se controla que la configuración por defecto no sea __CrazySetup__. Si fuera así, se devolvería un error en la construcción IllegalArgumentException
+- Ahora se han puesto finos, y no se quiere un boolean como resultado, si no que se devuelva un objecto String con el mensaje "COHETE LANZADO" y en caso de error una excepción de tipo __MonkeyTouchingException__.
+- Si no se pasa nada de configuración en el lanzamiento se entiende que es la configuración por defecto. Y ahora se controla que la configuración por defecto no sea __NoSetup__. Si fuera así, se devolvería un error en la construcción IllegalArgumentException
 - La cuenta atrás podrá ser de un número que se quiera, no necesariamente de 10.
-- Se tendrá en cuenta que si por algún motivo los monos tocan el panel de control y tenemos un panel loco (__CrazySetup__) se abortará dicha cuenta atrás devolviendo una excepción.
+- Se tendrá en cuenta que si por algún motivo los monos tocan el panel de control y tenemos un panel loco (__CrazySetup__) se abortará dicha cuenta atrás devolviendo una excepción __MonkeyTouchingException__.
 
 
 ## Como empezar
