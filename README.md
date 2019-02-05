@@ -30,7 +30,7 @@ Siguiente tanda de requisitos por parte de la ESA:
 
 ## Como empezar
 
-Para empezar, bájate el repo, create una rama con tu nombre y pasa los test "sbt test". Fallarán!!
+Para empezar, haz fork del repo, realiza el ejercicio y pasa los test "sbt test". 
 
 Cuando acabes el ejercicio, comitea los cambios y sientete libre de hacer una pull request.
 
