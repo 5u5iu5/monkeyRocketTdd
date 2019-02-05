@@ -6,4 +6,5 @@ object Setup {
   case object MediumSetup extends ControlPanelSetup
   case object ComplexSetup extends ControlPanelSetup
   case object CrazySetup extends ControlPanelSetup
+  case object NoSetup extends ControlPanelSetup
 }
