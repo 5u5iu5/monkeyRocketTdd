@@ -14,12 +14,13 @@ class SpaceMonkeyRocket(val setup: ControlPanelSetup, val countDown: Seq[Int] = 
 
   import com.tdd.monkeyrocket.MonkeyTouchingLikeCrazy.monkeyTouching
 
-  private def adjustSetupByMonkeyFault(countFailed: Boolean): Boolean = if (!countFailed) true else countFailed
+  private def adjustSetupByMonkeyFault(countFailed: Boolean): Boolean =
+    if (!countFailed) throw new MonkeyTouchingException else countFailed
 
   private def areMonkeysTouching: Int => Boolean = _ => {
     monkeyTouching match {
       case s: ControlPanelSetup if s == setup => true
-      case _ => throw new MonkeyTouchingException
+      case _ => false
     }
   }
 
@@ -28,14 +29,17 @@ class SpaceMonkeyRocket(val setup: ControlPanelSetup, val countDown: Seq[Int] = 
     case _ => true
   }
 
-  def launcherRocket: String = {
-    if (checkSetup(setup)) {
+  private def checkIfHaveRulesOrAnarchy(monkeysRules: Option[Int => Boolean]): Int => Boolean = monkeysRules match {
+    case Some(f) => f
+    case None => areMonkeysTouching
+  }
+
+  def launcherRocket(monkeysRules: Option[Int => Boolean]): String = {
       if (countDown.reverse
-        .map(areMonkeysTouching)
+        .map(checkIfHaveRulesOrAnarchy(monkeysRules))
         .map(adjustSetupByMonkeyFault)
         .forall(p => p))
         "COHETE LANZADO" else ""
-    } else ""
   }
 
 
