@@ -4,9 +4,9 @@ import com.tdd.monkeyrocket.Setup.{ControlPanelSetup, NoSetup}
 
 case class SpaceMonkeyRocket(setup: ControlPanelSetup) {
 
-  private val countDown: Seq[Int] = 1 to 10
-
   import com.tdd.monkeyrocket.MonkeyTouchingLikeCrazy.monkeyTouching
+
+  private val countDown: Seq[Int] = 1 to 10
 
   private def adjustSetupByMonkeyFault(countFailed: Boolean): Boolean = if (!countFailed) true else countFailed
 
