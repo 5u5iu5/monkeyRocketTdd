@@ -8,7 +8,7 @@ case class SpaceMonkeyRocket(setup: ControlPanelSetup) {
 
   private val countDown: Seq[Int] = 1 to 10
 
-  private def adjustSetupByMonkeyFault(countFailed: Boolean): Boolean = if (!countFailed) true else countFailed
+  private def adjustSetupByMonkeyFault(countFailed: Boolean): Boolean = !countFailed
 
   private def areMonkeysTouching: Int => Boolean = _ => {
     monkeyTouching match {
