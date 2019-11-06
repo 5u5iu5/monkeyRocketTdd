@@ -24,11 +24,6 @@ class SpaceMonkeyRocket(val setup: ControlPanelSetup, val countDown: Seq[Int] = 
     }
   }
 
-  private def checkSetup(setup: ControlPanelSetup): Boolean = setup match {
-    case NoSetup => false
-    case _ => true
-  }
-
   private def checkIfHaveRulesOrAnarchy(monkeysRules: Option[Int => Boolean]): Int => Boolean = monkeysRules match {
     case Some(f) => f
     case None => areMonkeysTouching

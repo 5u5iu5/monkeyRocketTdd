@@ -55,22 +55,22 @@ class SpaceMonkeyRocketSpec extends WordSpec with Matchers with PrivateMethodTes
     }
   }
 
-  // Why not?, I want to test my private auxiliary methods
-  "CheckSetup" should {
-    "return false because doesn't have setup" in {
-      val service = SpaceMonkeyRocket(DefaultSetup, 1 to 10)
-      val toInvokeMethod = PrivateMethod[Boolean]('checkSetup)
-      assert(false === service.invokePrivate(toInvokeMethod(NoSetup)))
-    }
-  }
-
-  "CheckSetup" should {
-    "return true because has defaultSetup" in {
-      val service = SpaceMonkeyRocket(DefaultSetup, 1 to 10)
-      val toInvokeMethod = PrivateMethod[Boolean]('checkSetup)
-      assert(true === service.invokePrivate(toInvokeMethod(DefaultSetup)))
-    }
-  }
+//  // Why not?, I want to test my private auxiliary methods
+//  "CheckSetup" should {
+//    "return false because doesn't have setup" in {
+//      val service = SpaceMonkeyRocket(DefaultSetup, 1 to 10)
+//      val toInvokeMethod = PrivateMethod[Boolean]('checkSetup)
+//      assert(false === service.invokePrivate(toInvokeMethod(NoSetup)))
+//    }
+//  }
+//
+//  "CheckSetup" should {
+//    "return true because has defaultSetup" in {
+//      val service = SpaceMonkeyRocket(DefaultSetup, 1 to 10)
+//      val toInvokeMethod = PrivateMethod[Boolean]('checkSetup)
+//      assert(true === service.invokePrivate(toInvokeMethod(DefaultSetup)))
+//    }
+//  }
 
   "AdjustSetupByMonkeyFault" should {
     "return a MonkeyTouchingException if is false as argument" in {

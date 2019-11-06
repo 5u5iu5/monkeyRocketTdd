@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76857a82-571a-4640-a153-3fc7eccd6f95" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/MonkeyRocket.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonkeyRocket.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/monkeyrocket-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/MonkeyRocket-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tdd/monkeyrocket/MonkeyTouchingLikeCrazy.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tdd/monkeyrocket/MonkeyTouchingLikeCrazy.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/com/tdd/monkeyrocket/SpaceMonkeyRocket.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/tdd/monkeyrocket/SpaceMonkeyRocket.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/com/tdd/monkeyrocket/SpaceMonkeyRocketSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/tdd/monkeyrocket/SpaceMonkeyRocketSpec.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,6 +107,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="ScalaTest.SpaceMonkeyRocketSpec" />
+        <item itemvalue="ScalaTest.SpaceMonkeyRocketSpec" />
         <item itemvalue="Application.MonkeyTouchingLikeCrazy" />
       </list>
     </recent_temporary>
@@ -180,7 +177,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
